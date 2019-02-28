@@ -1,0 +1,8 @@
+{
+  "/oauth-api": {
+    "target": "http://api.minikube.io/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
