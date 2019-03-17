@@ -35,16 +35,16 @@ import { NbSecurityModule, NbRoleProvider } from '@nebular/security';
       strategies: [
         NbOAuth2AuthStrategy.setup({
           name: 'email',
-          clientId: '4JcYvGpA',
-          clientSecret: 'hUD5OMclIcFc',
+          clientId: 'admin',
+          clientSecret: '123456',
           clientAuthMethod: NbOAuth2ClientAuthMethod.BASIC,
           token: {
-            endpoint: '/oauth-api/oauth/token',
+            endpoint: '/api/oauth/token',
             grantType: NbOAuth2GrantType.PASSWORD,
             class: NbAuthOAuth2JWTToken,
           },
           refresh: {
-            endpoint: '/oauth-api/oauth/refresh',
+            endpoint: '/api/oauth/refresh',
           },
         }),
       ],
