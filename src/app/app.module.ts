@@ -32,9 +32,19 @@ import { NbSecurityModule, NbRoleProvider } from '@nebular/security';
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
     NbAuthModule.forRoot({
+      forms: {
+        login: {
+          redirectDelay : 3000,
+          showMessages : {
+            error: true,
+            success: false,
+          },
+          strategy: 'password',
+        },
+      },
       strategies: [
         NbOAuth2AuthStrategy.setup({
-          name: 'email',
+          name: 'password',
           clientId: 'admin',
           clientSecret: '123456',
           clientAuthMethod: NbOAuth2ClientAuthMethod.BASIC,
